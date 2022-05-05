@@ -1,0 +1,11 @@
+body {
+    background-image: url("assets/images/bg.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.cleo {
+    position: absolute;
+    width: 40%;
+}
