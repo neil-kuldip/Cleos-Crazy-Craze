@@ -2,9 +2,8 @@ html {
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
-	background-color: #a06767;
 	height: 100%;
-	color: black;
+    background-color: #2669BF;
 }
 
 body {
@@ -14,7 +13,22 @@ body {
 	background-size: cover;
 }
 
-img {
+h1,h2 {
+	color: #F59543;
+	font-family: 'Acme', sans-serif;
+}
+
+#game-over {
+	border: 2px solid #000000;
+	background-color: aliceblue;
+	margin-top: 2vh;
+	margin-left: 10vw;
+	margin-right: 10vw;
+	padding: 5px;
+}
+
+.background {
+	position: relative;
 	max-height: 45%;
 	max-width: 70%;
 	border: solid;
@@ -22,30 +36,10 @@ img {
 	border-radius: 3px;
 }
 
-h1,h2 {
-	color: #F59543;
-	font-family: 'Acme', sans-serif;
-}
-
-h3{
-	text-decoration: underline;
-}
-
-button {
-	margin: auto;
-	color: "#000000";
-}
-
-button::hover {
-	color: "#FFFFFF";
-}
-
-#info-text {
-	border: 2px solid #000000;
-	background-color: aliceblue;
-	margin-top: 2vh;
-	margin-left: 10vw;
-	margin-right: 10vw;
-	padding: 5px;
-	font-family: 'Poppins', sans-serif;
+.cleo {
+	position: absolute;
+	margin: 0;
+	top: 80%;
+	left: 75%;
+	max-width: 10%;
 }
