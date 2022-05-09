@@ -1,11 +1,27 @@
-body {
-    background-image: url("assets/images/bg.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100%;
+html {
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
 }
 
-.cleo {
-    position: absolute;
-    width: 40%;
+body {
+	background-image: url(../ccc/hpbg.pngn);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
+	background-color: #E88C4A;
+	}
+
+img {
+	max-height: 45%;
+	max-width: 70%;
+	border: solid;
+	border-width: 5px;
+	border-radius: 3px;
+}
+
+h1,h2 {
+	color: #F59543;
+	font-family: 'Acme', sans-serif;
 }
