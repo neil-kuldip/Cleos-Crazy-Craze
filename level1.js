@@ -6,24 +6,28 @@ let responseHead = document.getElementById("response-head");
 let responseButton = document.getElementById("response-button");
 
 let clickCounter = 0;
-const TOP_MIN = background.getBoundingClientRect().top + 5;
-const TOP_MAX = background.getBoundingClientRect().bottom - 5;
-const LEFT_MIN = background.getBoundingClientRect().left + 5;
-const LEFT_MAX = background.getBoundingClientRect().right - 5;
+const TOP_MIN = background.getBoundingClientRect().top ;
+const TOP_MAX = background.getBoundingClientRect().bottom;
+const LEFT_MIN = background.getBoundingClientRect().left;
+const LEFT_MAX = background.getBoundingClientRect().right;
 const MAX_NUMBER_OF_CLICKS = 2;
 
 // Taken from GeeksforGeeks.org
 function randomNumber(min, max) { 
-    return Math.floor(Math.random() * (max - min) + min);
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 } 
 
 let randomTop = randomNumber(TOP_MIN, TOP_MAX);
 let randomLeft = randomNumber(LEFT_MIN, LEFT_MAX);
+let randomRotate = randomNumber(0, 360);
 
 response.style.visibility = "hidden";
 
 cleo.style.top = `${randomTop}px`;
 cleo.style.left = `${randomLeft}px`;
+cleo.style.transform = `rotate(${randomRotate}deg)`;
 
 //Testing
 console.log(level.clientWidth);
