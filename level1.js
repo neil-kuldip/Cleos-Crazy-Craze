@@ -10,6 +10,7 @@ const TOP_MIN = background.getBoundingClientRect().top + 5;
 const TOP_MAX = background.getBoundingClientRect().bottom - 5;
 const LEFT_MIN = background.getBoundingClientRect().left + 5;
 const LEFT_MAX = background.getBoundingClientRect().right - 5;
+const MAX_NUMBER_OF_CLICKS = 3;
 
 // Taken from GeeksforGeeks.org
 function randomNumber(min, max) { 
@@ -31,7 +32,7 @@ console.log(background.getBoundingClientRect().bottom - background.getBoundingCl
 console.log(background.getBoundingClientRect().right - background.getBoundingClientRect().left);
 
 function failedClicks() {
-    if (clickCounter >= 9) {
+    if (clickCounter >= MAX_NUMBER_OF_CLICKS) {
         responseHead.innerHTML = "Tough luck mate, Cleo got the best of you";
         responseButton.innerHTML = "Try Again?";
         responseButton.onclick = () => {
@@ -48,7 +49,7 @@ function failedClicks() {
 background.addEventListener("click", failedClicks);
 
 cleo.onclick = () => {
-    if (clickCounter < 9) {
+    if (clickCounter < MAX_NUMBER_OF_CLICKS) {
         background.removeEventListener("click", failedClicks);
         cleo.src = "assets/images/dude.png";
         responseHead.innerHTML = "Great job! Cleo was captured!";
