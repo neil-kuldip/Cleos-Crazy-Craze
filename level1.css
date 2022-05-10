@@ -18,7 +18,7 @@ h1,h2 {
 	font-family: 'Acme', sans-serif;
 }
 
-#game-over {
+#response {
 	border: 2px solid #000000;
 	background-color: aliceblue;
 	margin-top: 2vh;
