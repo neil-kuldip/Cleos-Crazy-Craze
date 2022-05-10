@@ -8,15 +8,24 @@ homepage_button.onclick = () => {
 };
 
 let instructionsButton = document.getElementById("info");
-let instructions = document.getElementById("info-text");
-instructions.style.visibility = "hidden";
+let infoTitle = document.getElementsByClassName("info-text-title")[0];
+let infoText = document.getElementsByClassName("info-text-description")[0];
+
 instructionsButton.onclick = () => {
-    if (instructions.style.visibility === "hidden") {
-        instructions.style.visibility = "visible";
+    if (infoTitle.innerHTML === "AGENDA") {
+        infoTitle.innerHTML = "INSTRUCTIONS";
+        infoText.innerHTML = "To catch Cleo, you will point and click on wherever you think Cleo is on the image"
+        + "<br/> <br/>" +
+        "Remember, Cleo is smart, so you have 10 tries and 1 min per level to find Cleo before it's game over"
+        + "<br/> <br/>" +
+        "The Professor is counting on you dear Seeker, begin when ready";
         instructionsButton.innerHTML = "Hide Instructions";
     }
     else {
-        instructions.style.visibility = "hidden";
+        infoTitle.innerHTML = "AGENDA";
+        infoText.innerHTML = "Over the ages, the rare and mysterious Cleo has managed to quickly camoflague itself to any background it chooses"
+        + "<br/> <br/>" +
+        "You, the seeker, must find Cleo in each background for further study";
         instructionsButton.innerHTML = "How to Play";
     }
 };
