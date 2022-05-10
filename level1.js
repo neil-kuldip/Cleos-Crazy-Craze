@@ -1,8 +1,15 @@
+let background = document.getElementsByClassName("background")[0];
+let level = document.getElementById("level");
+let cleo = document.getElementsByClassName("cleo")[0];
+let response = document.getElementById("response");
+let responseHead = document.getElementById("response-head");
+let responseButton = document.getElementById("response-button");
+
 let clickCounter = 0;
-const TOP_MIN = 20;
-const TOP_MAX = 80;
-const LEFT_MIN = 15;
-const LEFT_MAX = 75;
+const TOP_MIN = background.getBoundingClientRect().top + 5;
+const TOP_MAX = background.getBoundingClientRect().bottom - 5;
+const LEFT_MIN = background.getBoundingClientRect().left + 5;
+const LEFT_MAX = background.getBoundingClientRect().right - 5;
 
 // Taken from GeeksforGeeks.org
 function randomNumber(min, max) { 
@@ -12,20 +19,18 @@ function randomNumber(min, max) {
 let randomTop = randomNumber(TOP_MIN, TOP_MAX);
 let randomLeft = randomNumber(LEFT_MIN, LEFT_MAX);
 
-let background = document.getElementsByClassName("background")[0];
-let cleo = document.getElementsByClassName("cleo")[0];
-let response = document.getElementById("response");
-let responseHead = document.getElementById("response-head");
-let responseButton = document.getElementById("response-button");
-// let pass = document.getElementById("pass");
-// let passButton = document.getElementById("pass-button");
-
 response.style.visibility = "hidden";
 
-cleo.style.top = `${randomTop}%`;
-cleo.style.left = `${randomLeft}%`;
+cleo.style.top = `${randomTop}px`;
+cleo.style.left = `${randomLeft}px`;
 
-background.onclick = () => {
+//Testing
+console.log(level.clientWidth);
+console.log(level.clientHeight);
+console.log(background.getBoundingClientRect().bottom - background.getBoundingClientRect().top);
+console.log(background.getBoundingClientRect().right - background.getBoundingClientRect().left);
+
+function failedClicks() {
     if (clickCounter >= 9) {
         responseHead.innerHTML = "Tough luck mate, Cleo got the best of you";
         responseButton.innerHTML = "Try Again?";
@@ -35,13 +40,16 @@ background.onclick = () => {
         };
         response.style.visibility = "visible";
         cleo.src = "assets/images/dude.png";
+        background.removeEventListener("click", failedClicks);
     }
     clickCounter += 1;
 }
 
+background.addEventListener("click", failedClicks);
+
 cleo.onclick = () => {
     if (clickCounter < 9) {
-        clickCounter = -1000;
+        background.removeEventListener("click", failedClicks);
         cleo.src = "assets/images/dude.png";
         responseHead.innerHTML = "Great job! Cleo was captured!";
             responseButton.innerHTML = "Move to next round";

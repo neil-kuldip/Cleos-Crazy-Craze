@@ -21,7 +21,7 @@ h1,h2 {
 #response {
 	border: 2px solid #000000;
 	background-color: aliceblue;
-	margin-top: 2vh;
+	margin-top: 1vh;
 	margin-left: 10vw;
 	margin-right: 10vw;
 	padding: 5px;
@@ -29,8 +29,8 @@ h1,h2 {
 
 .background {
 	position: relative;
-	max-height: 50%;
-	max-width: 80%;
+	max-height: 45%;
+	max-width: 75%;
 	border: solid;
 	border-width: 5px;
 	border-radius: 3px;
