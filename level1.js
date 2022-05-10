@@ -34,20 +34,23 @@ background.onclick = () => {
             console.log("Sent to homepage");
         };
         response.style.visibility = "visible";
+        cleo.src = "assets/images/dude.png";
     }
     clickCounter += 1;
 }
 
 cleo.onclick = () => {
-    clickCounter = -1000;
-    cleo.src = "assets/images/dude.png";
-    responseHead.innerHTML = "Great job! Cleo was captured!";
-        responseButton.innerHTML = "Move to next round";
-        responseButton.onclick = () => {
-            window.location.href="end.html";
-            console.log("Sent to the end");
-        };
-        response.style.visibility = "visible";
+    if (clickCounter < 9) {
+        clickCounter = -1000;
+        cleo.src = "assets/images/dude.png";
+        responseHead.innerHTML = "Great job! Cleo was captured!";
+            responseButton.innerHTML = "Move to next round";
+            responseButton.onclick = () => {
+                window.location.href="end.html";
+                console.log("Sent to the end");
+            };
+            response.style.visibility = "visible";
+    }
 };
 
 // let createGameOver = () => {

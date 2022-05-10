@@ -29,8 +29,8 @@ h1,h2 {
 
 .background {
 	position: relative;
-	max-height: 45%;
-	max-width: 70%;
+	max-height: 50%;
+	max-width: 80%;
 	border: solid;
 	border-width: 5px;
 	border-radius: 3px;
@@ -39,7 +39,7 @@ h1,h2 {
 .cleo {
 	position: absolute;
 	margin: 0;
-	top: 80%;
-	left: 75%;
+	/* top: 80%;
+	left: 75%; */
 	max-width: 10%;
 }
