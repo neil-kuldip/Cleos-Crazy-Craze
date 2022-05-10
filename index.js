@@ -16,7 +16,7 @@ instructionsButton.onclick = () => {
         infoTitle.innerHTML = "INSTRUCTIONS";
         infoText.innerHTML = "To catch Cleo, you will point and click on wherever you think Cleo is on the image"
         + "<br/> <br/>" +
-        "Remember, Cleo is smart, so you have 10 tries and 1 min per level to find Cleo before it's game over"
+        "Remember, Cleo is smart, so you have 3 tries and an increasing amount of time per level to find Cleo before it's game over"
         + "<br/> <br/>" +
         "The Professor is counting on you dear Seeker, begin when ready";
         instructionsButton.innerHTML = "Hide Instructions";
