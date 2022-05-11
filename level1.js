@@ -36,7 +36,7 @@ console.log(background.getBoundingClientRect().bottom - background.getBoundingCl
 console.log(background.getBoundingClientRect().right - background.getBoundingClientRect().left);
 
 function failedClicks() {
-    if (clickCounter === MAX_NUMBER_OF_CLICKS) {
+    if (clickCounter === MAX_NUMBER_OF_CLICKS || levelOneSeconds <= 0) {
         responseHead.innerHTML = "Tough luck mate, Cleo got the best of you";
         responseButton.innerHTML = "Try Again?";
         responseButton.onclick = () => {
@@ -46,9 +46,9 @@ function failedClicks() {
         response.style.visibility = "visible";
         cleo.src = "assets/images/dude.png";
         background.removeEventListener("click", failedClicks);
+        clearInterval(countDown);
     }
     clickCounter += 1;
-    console.log(clickCounter);
 }
 
 background.addEventListener("click", failedClicks);
@@ -64,26 +64,21 @@ cleo.onclick = () => {
                 console.log("Sent to the end");
             };
             response.style.visibility = "visible";
+            clearInterval(countDown);
     }
 };
 
-// let createGameOver = () => {
-//     response = document.createElement("div");
-//     response.id = "game-over";
-//     responseHead = document.createElement("h3");
-//     responseHead.innerHTML = "Tough luck mate, Cleo got the best of you";
-//     response.appendChild(responseHead);
-//     responseButton = document.createElement("button");
-//     responseButton.id = "game-over-button";
-//     response.appendChild(responseButton);
-//     console.log("create game over");
-// };
+let timer = document.getElementById("timer");
+let levelOneSeconds = 20;
+let levelOneMinutes = 0;
 
-// passButton.onclick = () => {
-//     window.location.href="end.html";
-// };
+timer.innerHTML = `${String(levelOneMinutes).padStart(2, "0")}:${String(levelOneSeconds).padStart(2, "0")}`;    
 
-// gameOverButton.onclick = () => {
-//     window.location.href="index.html";
-//     console.log("Sent to homepage");
-// };
+const countDown = setInterval(() => {
+    levelOneSeconds--;
+    timer.innerHTML = `${String(levelOneMinutes).padStart(2, "0")}:${String(levelOneSeconds).padStart(2, "0")}`;
+    if (levelOneSeconds <= 0) {
+        timer.innerHTML = "TIME'S UP"
+        failedClicks();
+    }
+}, 1000);
