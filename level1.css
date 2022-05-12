@@ -18,19 +18,19 @@ h1,h2 {
 	font-family: 'Acme', sans-serif;
 }
 
-#game-over {
+#response {
 	border: 2px solid #000000;
 	background-color: aliceblue;
-	margin-top: 2vh;
+	margin-top: 1vh;
 	margin-left: 10vw;
 	margin-right: 10vw;
-	padding: 5px;
+	padding: 3px;
 }
 
 .background {
 	position: relative;
-	max-height: 45%;
-	max-width: 70%;
+	max-height: 50%;
+	max-width: 80%;
 	border: solid;
 	border-width: 5px;
 	border-radius: 3px;
@@ -39,7 +39,13 @@ h1,h2 {
 .cleo {
 	position: absolute;
 	margin: 0;
-	top: 80%;
-	left: 75%;
 	max-width: 10%;
+}
+
+@media only screen and (max-width: 600px) {
+	.cleo {
+		position: absolute;
+		margin: 0;
+		max-width: 15%;
+	}
 }
