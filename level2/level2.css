@@ -61,4 +61,9 @@ h1,h2 {
 		color: #555548;
 		font-family: 'Acme', sans-serif;
 	}
+
+    h3 {
+		font-size: 14px;
+		font-family: 'Acme', sans-serif;
+	}
 }
