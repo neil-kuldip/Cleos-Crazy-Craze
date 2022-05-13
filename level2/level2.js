@@ -37,15 +37,15 @@ cleo.style.transform = `rotate(${randomRotate}deg)`;
 // Countdown Timer & Click Counter
 
 let timer = document.getElementById("timer");
-let levelOneSeconds = 20;
-let levelOneMinutes = 0;
+let levelTwoSeconds = 30;
+let levelTwoMinutes = 0;
 
-timer.innerHTML = `Timer: ${String(levelOneMinutes).padStart(2, "0")}:${String(levelOneSeconds).padStart(2, "0")}`;    
+timer.innerHTML = `Timer: ${String(levelTwoMinutes).padStart(2, "0")}:${String(levelTwoSeconds).padStart(2, "0")}`;    
 
 const countDown = setInterval(() => {
-    levelOneSeconds--;
-    timer.innerHTML = `Timer: ${String(levelOneMinutes).padStart(2, "0")}:${String(levelOneSeconds).padStart(2, "0")}`;
-    if (levelOneSeconds <= 0) {
+    levelTwoSeconds--;
+    timer.innerHTML = `Timer: ${String(levelTwoMinutes).padStart(2, "0")}:${String(levelTwoSeconds).padStart(2, "0")}`;
+    if (levelTwoSeconds <= 0) {
         timer.innerHTML = "TIME'S UP"
         failedClicks();
     }
@@ -57,7 +57,7 @@ counter.innerHTML = `Clicks left: ${clickCounter + 1}`
 // Game mechanics -- Manipulation of timer and clickCounter variables, user's walkthrough on pass or fail
 
 function failedClicks() {
-    if (clickCounter === 0 || levelOneSeconds <= 0) {
+    if (clickCounter === 0 || levelTwoSeconds <= 0) {
         responseHead.innerHTML = "Tough luck mate, Cleo got the best of you";
         responseButton.innerHTML = "Try Again?";
         responseButton.onclick = () => {
@@ -85,8 +85,8 @@ cleo.onclick = () => {
         responseHead.innerHTML = "Great job! Cleo was captured!";
             responseButton.innerHTML = "Move to next round";
             responseButton.onclick = () => {
-                window.location.href="../level2/level2.html";
-                console.log("Sent to level 2");
+                window.location.href="../end/end.html";
+                console.log("Sent to the end");
             };
             response.style.visibility = "visible";
             clearInterval(countDown);
