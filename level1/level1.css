@@ -18,6 +18,13 @@ h1,h2 {
 	font-family: 'Acme', sans-serif;
 }
 
+#level-status {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 10vw;
+	margin-right: 10vw;
+}
+
 #response {
 	border: 2px solid #000000;
 	background-color: aliceblue;
@@ -47,5 +54,11 @@ h1,h2 {
 		position: absolute;
 		margin: 0;
 		max-width: 15%;
+	}
+
+	h1,h2 {
+		font-size: 16px;
+		color: #F59543;
+		font-family: 'Acme', sans-serif;
 	}
 }

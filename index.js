@@ -3,7 +3,7 @@
 
 let homepage_button = document.getElementById("homepage_to_level1");
 homepage_button.onclick = () => {
-    window.location.href="level1.html";
+    window.location.href="level1/level1.html";
     console.log("Sent to level 1");
 };
 
