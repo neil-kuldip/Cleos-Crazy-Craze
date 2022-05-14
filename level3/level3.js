@@ -37,7 +37,7 @@ cleo.style.transform = `rotate(${randomRotate}deg)`;
 // Countdown Timer & Click Counter
 
 let timer = document.getElementById("timer");
-let levelTwoSeconds = 30;
+let levelTwoSeconds = 40;
 let levelTwoMinutes = 0;
 
 timer.innerHTML = `Timer: ${String(levelTwoMinutes).padStart(2, "0")}:${String(levelTwoSeconds).padStart(2, "0")}`;    
@@ -85,7 +85,7 @@ cleo.onclick = () => {
         responseHead.innerHTML = "Great job! Cleo was captured!";
             responseButton.innerHTML = "Move to next round";
             responseButton.onclick = () => {
-                window.location.href="../level3/level3.html";
+                window.location.href="../level4/level4.html";
                 console.log("Sent to the end");
             };
             response.style.visibility = "visible";
