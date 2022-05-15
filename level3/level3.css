@@ -3,7 +3,7 @@ html {
 	margin: 0px;
 	padding: 0px;
 	height: 100%;
-    background-color: #2669BF;
+    background-color: #953553;
 }
 
 body {
@@ -14,8 +14,15 @@ body {
 }
 
 h1,h2 {
-	color: #F59543;
+	color: #CCF;
 	font-family: 'Acme', sans-serif;
+}
+
+#level-status {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 10vw;
+	margin-right: 10vw;
 }
 
 #response {
@@ -47,5 +54,16 @@ h1,h2 {
 		position: absolute;
 		margin: 0;
 		max-width: 15%;
+	}
+
+	h1,h2 {
+		font-size: 16px;
+		color: #CCF;
+		font-family: 'Acme', sans-serif;
+	}
+
+    h3 {
+		font-size: 14px;
+		font-family: 'Acme', sans-serif;
 	}
 }

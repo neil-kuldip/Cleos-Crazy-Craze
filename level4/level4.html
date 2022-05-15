@@ -7,23 +7,33 @@
     <meta name="description" lang="en" content="Final Web Production Interactive Website Project" /> 
     <meta name="keywords" content="media, chameleon, where's waldo, patterns" />
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="end.css" />
+    <link rel="stylesheet" href="level4.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
 
-    <title>The End</title>
+    <title>Level 4</title>
   </head>
 
   <body>
-    <h1>Cleo's Crazy Craze</h1>
-    <br>
+    <div id="level-status">
+      <h1 id="timer">00:00</h1>
+      <h1>Level 4</h1>
+      <h1 id="counter">0</h1>
+    </div>  
     <main>
-      <div>
-        <img class="background" src="assets/images/end.png">
+      <div id="level">
+          <!-- TODO: Add background src here -->
+        <img class="background" src="">
+        <img class="cleo" src="../assets/images/outline.png" />
       </div>
-      <button id="go-home">Return Home</button>
-      <script type="text/javascript" src="end.js"></script>
+      
+      <div id="response">
+        <h3 id="response-head">Tough luck mate, Cleo got the best of you</h3>
+        <button id="response-button">Try Again?</button>
+      </div>
+      
+      <script type="text/javascript" src="level4.js"></script>
   </body>
     </main>
 </html>
