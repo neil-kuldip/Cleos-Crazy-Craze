@@ -82,7 +82,7 @@ cleo.onclick = () => {
     if (clickCounter >= 0) {
         background.removeEventListener("click", failedClicks);
         cleo.src = "../assets/images/dude.png";
-        responseHead.innerHTML = "Cleo's had enough and is willing to cooperate. Thank you dear seeker!";
+        responseHead.innerHTML = "Cleo's had enough and is willing to cooperate. Thank you!";
             responseButton.innerHTML = "Finish";
             responseButton.onclick = () => {
                 window.location.href="../end/end.html";
