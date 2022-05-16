@@ -7,6 +7,7 @@ let cleo = document.getElementsByClassName("cleo")[0];
 let response = document.getElementById("response");
 let responseHead = document.getElementById("response-head");
 let responseButton = document.getElementById("response-button");
+let slurpSound = document.getElementById("slurp");
 
 const MAX_NUMBER_OF_CLICKS = 2;
 let clickCounter = MAX_NUMBER_OF_CLICKS;
@@ -83,6 +84,9 @@ cleo.onclick = () => {
         background.removeEventListener("click", failedClicks);
         cleo.src = "../assets/images/dude.png";
         responseHead.innerHTML = "Cleo's had enough and is willing to cooperate. Thank you!";
+        slurpSound.src = "../assets/sounds/chameleon_slurp.wav";
+        slurpSound.volume = 0.1;
+        slurpSound.play();
             responseButton.innerHTML = "Finish";
             responseButton.onclick = () => {
                 window.location.href="../end/end.html";

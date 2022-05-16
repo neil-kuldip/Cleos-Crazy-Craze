@@ -36,13 +36,28 @@ h3{
 	text-decoration: underline;
 }
 
-button {
-	margin: auto;
-	color: #000000;
+#intro-nav {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 25vw;
+	margin-right: 25vw;
 }
 
-button::hover {
-	color: "#FFFFFF";
+button {
+	margin: auto;
+	color: #519BF5;
+	background-color:#F0EAD6;
+	font-family: 'Acme', sans-serif;
+	padding: 1vw;
+	border-radius: 5px;
+	border: none;
+}
+
+button:hover {
+	color: #F0EAD6;
+	background-color: #519BF5;
+	border: none;
+	box-shadow:  5px 10px 8px #888;
 }
 
 #info-text {
