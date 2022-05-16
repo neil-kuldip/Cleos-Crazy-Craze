@@ -21,6 +21,23 @@ h1,h2 {
 	font-family: 'Acme', sans-serif;
 }
 
+#response-button {
+	margin: auto;
+	color: #3D5A5C;
+	background-color: transparent;
+	font-family: 'Acme', sans-serif;
+	padding: 1vw;
+	border-radius: 5px;
+	border: 2px solid #000;
+}
+
+#response-button:hover {
+	color: #e1d4e6;
+	background-color: #3D5A5C;
+	border: none;
+	box-shadow:  5px 10px 8px #888;
+}
+
 #response-head {
 	font-family: 'Acme', sans-serif;
 }

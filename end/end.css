@@ -23,3 +23,21 @@ body {
 	border-width: 5px;
 	border-radius: 3px;
     border-color: black;
+}
+
+#go-home {
+	margin-top: 2vh;
+	color: #F2D16D;
+	background-color: #316FF5;
+	font-family: 'Acme', sans-serif;
+	padding: 1vw;
+	border-radius: 5px;
+	border: 2px solid #000;
+}
+
+#go-home:hover {
+	color: #316FF5;
+	background-color: #F0EAD6;
+	border: none;
+	box-shadow:  5px 10px 8px #000;
+}
