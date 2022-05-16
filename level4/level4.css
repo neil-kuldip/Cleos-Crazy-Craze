@@ -2,8 +2,9 @@ html {
 	text-align: center;
 	margin: 0px;
 	padding: 0px;
-	height: 100%;
-    background-color: #953553;
+	background-color: #e2d5e6;
+	background-image: linear-gradient(315deg, #e2d5e6 0%, #e1d4e6 74%);
+		
 }
 
 body {
@@ -11,10 +12,16 @@ body {
 	background-position: center;
 	background-attachment: fixed;
 	background-size: cover;
+	height: 100%;
+
 }
 
 h1,h2 {
-	color: #CCF;
+	color: #3D5A5C;
+	font-family: 'Acme', sans-serif;
+}
+
+#response-head {
 	font-family: 'Acme', sans-serif;
 }
 
@@ -36,7 +43,7 @@ h1,h2 {
 
 .background {
 	position: relative;
-	max-height: 50%;
+	max-height: 80%;
 	max-width: 80%;
 	border: solid;
 	border-width: 5px;

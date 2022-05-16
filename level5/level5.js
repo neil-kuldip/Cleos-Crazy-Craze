@@ -37,7 +37,7 @@ cleo.style.transform = `rotate(${randomRotate}deg)`;
 // Countdown Timer & Click Counter
 
 let timer = document.getElementById("timer");
-let levelTwoSeconds = 55;
+let levelTwoSeconds = 59;
 let levelTwoMinutes = 0;
 
 timer.innerHTML = `Timer: ${String(levelTwoMinutes).padStart(2, "0")}:${String(levelTwoSeconds).padStart(2, "0")}`;    
