@@ -11,5 +11,4 @@ Neil Kuldip -> [neil-kuldip](https://github.com/neil-kuldip) & Tashira Reyes -> 
 
 
 ### Join the fun!
-![Alt text](assets/images/cleo-qrcode.svg)
 <img src="assets/images/cleo-qrcode.svg">
