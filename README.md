@@ -11,4 +11,4 @@ Neil Kuldip -> [neil-kuldip](https://github.com/neil-kuldip) & Tashira Reyes -> 
 
 
 ### Join the fun!
-<img src='assets/images/frame.png' title='Link to Play' width='400px' alt='Game QR Code' />
+<img src="assets/images/cleo-qrcode.svg" width="50%" alt='Game QR Code'>
